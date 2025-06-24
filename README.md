@@ -12,6 +12,8 @@ ___
 
 The official PyTorch implementation of L2CS-Net for gaze estimation and tracking.
 
+See additional section Modifications at the end to look at changes made in this fork.
+
 ## Installation
 <img src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/PyTorch%20-%23EE4C2C.svg?&style=for-the-badge&logo=PyTorch&logoColor=white" />
 
@@ -146,3 +148,16 @@ This means the code will perform training and store the models to *output/snapsh
 ```
 This means the code will perform testing on snapshot_folder and store the results to *evaluation/L2CS-gaze360*.
 
+# Modifications
+
+These changes were made as part of an effort to both make a ROS2 C++ scalable code stack and a collaboration with a [PhD student](https://github.com/NipuniHW) at the University of Canberra where the focal study point was gaze analysis in human-robot interaction.
+
+To download weights, use command
+
+```
+curl -L "https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/0GXEIS/L2CSNet_gaze360.pkl" --output L2CSNet_gaze360.pkl
+```
+
+See file demo_gd for gaze detection code implementation
+
+TODO:: Working on entropy calculation now.
