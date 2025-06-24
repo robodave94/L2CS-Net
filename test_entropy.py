@@ -26,6 +26,11 @@ if __name__ == '__main__':
             success, frame = cap.read()    
             
             g_success = gaze_detector.detect_gaze(frame)
+            if not g_success:
+                print("Gaze detection failed, retrying...")
+                continue
+            
+            results = gaze_detector
 
             vframe = gaze_detector.draw_gaze_window()    
 

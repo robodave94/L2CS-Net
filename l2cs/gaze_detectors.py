@@ -58,3 +58,9 @@ class Gaze_Detector:
         fps_img = cv2.putText(img, 'FPS: {:.1f}'.format(self.myFPS), (10, 20),cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 255, 0), 1, cv2.LINE_AA)
         
         return fps_img
+    
+    def get_latest_gaze_results(self):
+        if self._last_frame_detected_gaze:
+            return self._current_gaze_directions
+        else:
+            return None
