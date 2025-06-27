@@ -13,7 +13,7 @@ if __name__ == '__main__':
         weights_pth='/home/vscode/gaze_ws/_L2CSNet_gaze360.pkl'
     )
 
-    cap = cv2.VideoCapture(int(0))
+    cap = cv2.VideoCapture(int(2))
 
     # Check if the webcam is opened correctly
     if not cap.isOpened():
@@ -26,11 +26,14 @@ if __name__ == '__main__':
             success, frame = cap.read()    
             
             g_success = gaze_detector.detect_gaze(frame)
-            if not g_success:
-                print("Gaze detection failed, retrying...")
-                continue
-            
-            results = gaze_detector
+
+            if g_success:
+                time_ = time.time()
+                results = gaze_detector.get_latest_gaze_results()
+                print("bboxes:", results.bboxes[0])
+                print("pitch:", results.pitch[0])
+                print("yaw:", results.yaw[0])
+                print("scores:", results.scores[0])
 
             vframe = gaze_detector.draw_gaze_window()    
 

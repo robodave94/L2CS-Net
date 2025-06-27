@@ -27,6 +27,13 @@ if __name__ == '__main__':
             
             g_success = gaze_detector.detect_gaze(frame)
 
+            if g_success:
+                results = gaze_detector.get_latest_gaze_results()
+                print("bboxes:", results.bboxes[0])
+                print("pitch:", results.pitch[0])
+                print("yaw:", results.yaw[0])
+                print("scores:", results.scores[0])
+
             vframe = gaze_detector.draw_gaze_window()    
 
 
