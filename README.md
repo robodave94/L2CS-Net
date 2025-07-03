@@ -155,7 +155,7 @@ These changes were made as part of an effort to both make a ROS2 C++ scalable co
 To download weights, use command
 
 ```
-curl -L "https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/0GXEIS/L2CSNet_gaze360.pkl" --output L2CSNet_gaze360.pkl
+curl -L "https://dataverse.harvard.edu/api/access/datafile/11671610" --output L2CSNet_gaze360.pkl
 ```
 
 See file demo_gd for gaze detection code implementation
