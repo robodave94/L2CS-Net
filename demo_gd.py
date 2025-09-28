@@ -10,7 +10,7 @@ if __name__ == '__main__':
     gaze_detector = Gaze_Detector(
         device='cuda',
         nn_arch='ResNet50',
-        weights_pth='/home/vscode/gaze_ws/_L2CSNet_gaze360.pkl'
+        weights_pth='/home/vscode/gaze_ws/tooling/other/_L2CSNet_gaze360.pkl'
     )
 
     cap = cv2.VideoCapture(int(0))

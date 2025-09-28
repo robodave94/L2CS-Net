@@ -160,4 +160,6 @@ curl -L "https://dataverse.harvard.edu/api/access/datafile/11671610" --output L2
 
 See file demo_gd for gaze detection code implementation
 
-TODO:: Working on entropy calculation now.
+TODO:: Working on entropy calculation now, script works but want operational for two multiple gaze engagement mechanisms
+
+TODO:: tracking, ontop of the following object, I also want to integrate tracking metrics, this will need to be done on the next layers as a 
